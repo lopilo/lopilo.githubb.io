@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>animation-duration</title>
+  <style>
+   .warn {
+    background: #fc0;
+    padding: 10px;
+    top: -100px;
+    position: absolute;
+    left: 0; right: 0;
+   }
+   .fadeInTop {
+    -webkit-animation-name: fadeInTop;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: fadeInTop;
+    animation-duration: 2s; /* Продолжительность анимации */
+    animation-delay: 1s; /* Задержка */
+    animation-fill-mode: forwards;
+   }
+   @-webkit-keyframes fadeInTop {
+    from { top: -100px; }
+    to { top: 0; }
+   }
+   @keyframes fadeInTop {
+    from {  top: -100px; }
+    to {  top: 0; }
+   }
+  </style>
+ </head>
+ <body>
+  <div class="warn fadeInTop">Вы не учли, что скалярное 
+  поле необходимо и достаточно!</div>
+ </body>
+</html>
